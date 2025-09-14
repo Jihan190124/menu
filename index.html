@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spice Garden - Authentic Indian Cuisine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold text-danger" href="#home">🌶️ Spice Garden</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!-- Dropdown in Center -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown">
+            Menu Categories
+          </a>
+          <ul class="dropdown-menu text-center" aria-labelledby="menuDropdown">
+            <li><a class="dropdown-item" href="#soups">🍲 Soups</a></li>
+            <li><a class="dropdown-item" href="#starters">🥟 Starters</a></li>
+            <li><a class="dropdown-item" href="#paneer">🧀 Paneer Dishes</a></li>
+            <li><a class="dropdown-item" href="#curries">🍛 Veg Curries</a></li>
+            <li><a class="dropdown-item" href="#rice">🍚 Rice</a></li>
+            <li><a class="dropdown-item" href="#breads">🍞 Breads</a></li>
+            <li><a class="dropdown-item" href="#beverages">🍹 Beverages</a></li>
+            <li><a class="dropdown-item" href="#desserts">🍮 Desserts</a></li>
+          </ul>
+        </li>
+        <!-- Other Links -->
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="vh-100 d-flex flex-column justify-content-center align-items-center text-center text-white" style="background: linear-gradient(rgba(139,0,0,0.7), rgba(255,153,51,0.6)), url('https://source.unsplash.com/1200x800/?indian-food') center/cover;">
+  <h1 class="display-3 fw-bold">Spice Garden</h1>
+  <p class="lead mb-4">Authentic Indian flavors crafted with love and tradition</p>
+  <a href="#menu" class="btn btn-warning btn-lg shadow">Explore Menu</a>
+</section>
+
+<!-- Specials -->
+<section id="specials" class="py-5 bg-warning text-white text-center">
+  <div class="container">
+    <h2 class="fw-bold">Today's Specials</h2>
+    <p class="mb-4">Don't miss out on our chef's recommendations</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card bg-transparent border-0 text-white">
+       
+          <div class="card-body">
+            <h5 class="card-title">Veg Biryani</h5>
+            <p class="card-text">Aromatic rice dish with vegetables and spices.</p>
+            <span class="fw-bold">₹350</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-transparent border-0 text-white">
+        
+          <div class="card-body">
+            <h5 class="card-title">Paneer Tikka</h5>
+            <p class="card-text">Grilled paneer marinated in spices.</p>
+            <span class="fw-bold">₹320</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-transparent border-0 text-white">
+          
+          <div class="card-body">
+            <h5 class="card-title">Gulab Jamun</h5>
+            <p class="card-text">Sweet dumplings in rose syrup.</p>
+            <span class="fw-bold">₹180</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">Our Menu</h2>
+      <p class="text-muted">Delicious Indian dishes curated for you</p>
+    </div>
+    <ul class="nav nav-tabs justify-content-center mb-4" id="menuTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="soups-tab" data-bs-toggle="tab" data-bs-target="#soups" type="button" role="tab" aria-controls="soups" aria-selected="true">🍲 Soups</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="starters-tab" data-bs-toggle="tab" data-bs-target="#starters" type="button" role="tab" aria-controls="starters" aria-selected="false">🥟 Starters</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="paneer-tab" data-bs-toggle="tab" data-bs-target="#paneer" type="button" role="tab" aria-controls="paneer" aria-selected="false">🧀 Paneer Dishes</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="curries-tab" data-bs-toggle="tab" data-bs-target="#curries" type="button" role="tab" aria-controls="curries" aria-selected="false">🍛 Veg Curries</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="rice-tab" data-bs-toggle="tab" data-bs-target="#rice" type="button" role="tab" aria-controls="rice" aria-selected="false">🍚 Rice</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="breads-tab" data-bs-toggle="tab" data-bs-target="#breads" type="button" role="tab" aria-controls="breads" aria-selected="false">🍞 Breads</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="beverages-tab" data-bs-toggle="tab" data-bs-target="#beverages" type="button" role="tab" aria-controls="beverages" aria-selected="false">🍹 Beverages</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts" type="button" role="tab" aria-controls="desserts" aria-selected="false">🍮 Desserts</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="menuTabsContent">
+      <!-- Soups -->
+      <div class="tab-pane fade show active" id="soups" role="tabpanel" aria-labelledby="soups-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card menu-card">
+            
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Hot & Sour Soup</h5>
+                  <span class="text-warning fw-bold">₹190</span>
+                </div>
+                <p class="card-text text-muted">Spicy and tangy soup with fresh veggies.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card menu-card">
+            
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Sweet Corn Soup</h5>
+                  <span class="text-warning fw-bold">₹170</span>
+                </div>
+                <p class="card-text text-muted">Creamy soup with fresh corn and herbs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Starters -->
+      <div class="tab-pane fade" id="starters" role="tabpanel" aria-labelledby="starters-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card menu-card">
+     
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Veg Spring Roll</h5>
+                  <span class="text-warning fw-bold">₹220</span>
+                </div>
+                <p class="card-text text-muted">Crispy fried rolls stuffed with spiced veggies.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card menu-card">
+                          <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Paneer 65</h5>
+                  <span class="text-warning fw-bold">₹250</span>
+                </div>
+                <p class="card-text text-muted">South Indian style deep-fried paneer cubes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Paneer Dishes -->
+      <div class="tab-pane fade" id="paneer" role="tabpanel" aria-labelledby="paneer-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card menu-card">
+          
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Paneer Lababdar</h5>
+                  <span class="text-warning fw-bold">₹390</span>
+                </div>
+                <p class="card-text text-muted">Paneer in rich onion-tomato gravy with cream.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card menu-card">
+
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Paneer Bhurji</h5>
+                  <span class="text-warning fw-bold">₹350</span>
+                </div>
+                <p class="card-text text-muted">Scrambled paneer cooked with spices & herbs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Veg Curries -->
+      <div class="tab-pane fade" id="curries" role="tabpanel" aria-labelledby="curries-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card menu-card">
+    
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Mix Veg Curry</h5>
+                  <span class="text-warning fw-bold">₹280</span>
+                </div>
+                <p class="card-text text-muted">Seasonal vegetables cooked in flavorful curry.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card menu-card">
+    
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Bhindi Masala</h5>
+                  <span class="text-warning fw-bold">₹260</span>
+                </div>
+                <p class="card-text text-muted">Okra stir fried with onions, tomatoes & spices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Rice -->
+      <div class="tab-pane fade" id="rice" role="tabpanel" aria-labelledby="rice-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card menu-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Jeera Rice</h5>
+                  <span class="text-warning fw-bold">₹150</span>
+                </div>
+                <p class="card-text text-muted">Fragrant basmati rice tempered with cumin seeds.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card menu-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Biryani</h5>
+                  <span class="text-warning fw-bold">₹350</span>
+                </div>
+                <p class="card-text text-muted">Aromatic basmati rice cooked with spices and vegetables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Breads -->
+      <div class="tab-pane fade" id="breads" role="tabpanel" aria-labelledby="breads-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card menu-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Butter Naan</h5>
+                  <span class="text-warning fw-bold">₹60</span>
+                </div>
+                <p class="card-text text-muted">Soft Indian flatbread brushed with butter.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Beverages -->
+      <div class="tab-pane fade" id="beverages" role="tabpanel" aria-labelledby="beverages-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card menu-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Cold Coffee</h5>
+                  <span class="text-warning fw-bold">₹140</span>
+                </div>
+                <p class="card-text text-muted">Chilled coffee topped with ice cream.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card menu-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Fresh Lime Soda</h5>
+                  <span class="text-warning fw-bold">₹100</span>
+                </div>
+                <p class="card-text text-muted">Refreshing lime juice with soda and mint.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Desserts -->
+      <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card menu-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Gulab Jamun</h5>
+                  <span class="text-warning fw-bold">₹180</span>
+                </div>
+                <p class="card-text text-muted">Soft milk dumplings soaked in rose syrup.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card menu-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Kulfi</h5>
+                  <span class="text-warning fw-bold">₹150</span>
+                </div>
+                <p class="card-text text-muted">Traditional Indian ice cream with cardamom.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5 bg-danger text-white text-center">
+  <div class="container">
+    <h2 class="fw-bold">About Us</h2>
+    <p>Serving authentic Indian cuisine since 2003 with love & tradition.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold text-danger">Contact Us</h2>
+    <p class="mb-1">📍 123 Spice Street, Flavor District</p>
+    <p class="mb-1">📞 +91 98765 43210</p>
+    <p>✉️ hello@spicegarden.com</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-3 text-center">
+  <p class="mb-0">&copy; 2024 Spice Garden. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
