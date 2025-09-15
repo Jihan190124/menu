@@ -1,375 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spice Garden - Authentic Indian Cuisine</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Vista - Fine Dining Restaurant Menu</title>
+    <meta name="description" content="Experience fine dining at Bella Vista. Discover our carefully crafted menu featuring the finest ingredients and expertly prepared dishes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-  <div class="container-fluid">
-    <!-- Logo -->
-    <a class="navbar-brand fw-bold text-danger" href="#home">🌶️ Spice Garden</a>
-
-    <!-- Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar Links -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <!-- Dropdown in Center -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fw-semibold" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown">
-            Menu Categories
-          </a>
-          <ul class="dropdown-menu text-center" aria-labelledby="menuDropdown">
-            <li><a class="dropdown-item" href="#soups">🍲 Soups</a></li>
-            <li><a class="dropdown-item" href="#starters">🥟 Starters</a></li>
-            <li><a class="dropdown-item" href="#paneer">🧀 Paneer Dishes</a></li>
-            <li><a class="dropdown-item" href="#curries">🍛 Veg Curries</a></li>
-            <li><a class="dropdown-item" href="#rice">🍚 Rice</a></li>
-            <li><a class="dropdown-item" href="#breads">🍞 Breads</a></li>
-            <li><a class="dropdown-item" href="#beverages">🍹 Beverages</a></li>
-            <li><a class="dropdown-item" href="#desserts">🍮 Desserts</a></li>
-          </ul>
-        </li>
-        <!-- Other Links -->
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section id="home" class="vh-100 d-flex flex-column justify-content-center align-items-center text-center text-white" style="background: linear-gradient(rgba(139,0,0,0.7), rgba(255,153,51,0.6)), url('https://source.unsplash.com/1200x800/?indian-food') center/cover;">
-  <h1 class="display-3 fw-bold">Spice Garden</h1>
-  <p class="lead mb-4">Authentic Indian flavors crafted with love and tradition</p>
-  <a href="#menu" class="btn btn-warning btn-lg shadow">Explore Menu</a>
-</section>
-
-<!-- Specials -->
-<section id="specials" class="py-5 bg-warning text-white text-center">
-  <div class="container">
-    <h2 class="fw-bold">Today's Specials</h2>
-    <p class="mb-4">Don't miss out on our chef's recommendations</p>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card bg-transparent border-0 text-white">
-       
-          <div class="card-body">
-            <h5 class="card-title">Veg Biryani</h5>
-            <p class="card-text">Aromatic rice dish with vegetables and spices.</p>
-            <span class="fw-bold">₹350</span>
-          </div>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bella Vista</h1>
+            <p class="hero-subtitle">Fine Dining Experience</p>
+            <p class="hero-description">
+                Discover our carefully crafted menu featuring the finest ingredients, 
+                expertly prepared by our renowned chefs in an atmosphere of elegance and warmth.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToMenu()">View Menu</button>
+                <button class="btn btn-outline">Make Reservation</button>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-transparent border-0 text-white">
-        
-          <div class="card-body">
-            <h5 class="card-title">Paneer Tikka</h5>
-            <p class="card-text">Grilled paneer marinated in spices.</p>
-            <span class="fw-bold">₹320</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-transparent border-0 text-white">
-          
-          <div class="card-body">
-            <h5 class="card-title">Gulab Jamun</h5>
-            <p class="card-text">Sweet dumplings in rose syrup.</p>
-            <span class="fw-bold">₹180</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Menu Section -->
-<section id="menu" class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-danger">Our Menu</h2>
-      <p class="text-muted">Delicious Indian dishes curated for you</p>
-    </div>
-    <ul class="nav nav-tabs justify-content-center mb-4" id="menuTabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="soups-tab" data-bs-toggle="tab" data-bs-target="#soups" type="button" role="tab" aria-controls="soups" aria-selected="true">🍲 Soups</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="starters-tab" data-bs-toggle="tab" data-bs-target="#starters" type="button" role="tab" aria-controls="starters" aria-selected="false">🥟 Starters</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="paneer-tab" data-bs-toggle="tab" data-bs-target="#paneer" type="button" role="tab" aria-controls="paneer" aria-selected="false">🧀 Paneer Dishes</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="curries-tab" data-bs-toggle="tab" data-bs-target="#curries" type="button" role="tab" aria-controls="curries" aria-selected="false">🍛 Veg Curries</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="rice-tab" data-bs-toggle="tab" data-bs-target="#rice" type="button" role="tab" aria-controls="rice" aria-selected="false">🍚 Rice</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="breads-tab" data-bs-toggle="tab" data-bs-target="#breads" type="button" role="tab" aria-controls="breads" aria-selected="false">🍞 Breads</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="beverages-tab" data-bs-toggle="tab" data-bs-target="#beverages" type="button" role="tab" aria-controls="beverages" aria-selected="false">🍹 Beverages</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts" type="button" role="tab" aria-controls="desserts" aria-selected="false">🍮 Desserts</button>
-      </li>
-    </ul>
-    <div class="tab-content" id="menuTabsContent">
-      <!-- Soups -->
-      <div class="tab-pane fade show active" id="soups" role="tabpanel" aria-labelledby="soups-tab">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card menu-card">
-            
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Hot & Sour Soup</h5>
-                  <span class="text-warning fw-bold">₹190</span>
-                </div>
-                <p class="card-text text-muted">Spicy and tangy soup with fresh veggies.</p>
-              </div>
+    <!-- Navigation -->
+    <nav class="menu-nav" id="menuNav">
+        <div class="nav-container">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-section="appetizers">Appetizers</button>
+                <button class="nav-tab" data-section="mains">Main Courses</button>
+                <button class="nav-tab" data-section="desserts">Desserts</button>
+                <button class="nav-tab" data-section="beverages">Beverages</button>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card menu-card">
-            
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Sweet Corn Soup</h5>
-                  <span class="text-warning fw-bold">₹170</span>
-                </div>
-                <p class="card-text text-muted">Creamy soup with fresh corn and herbs.</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- Starters -->
-      <div class="tab-pane fade" id="starters" role="tabpanel" aria-labelledby="starters-tab">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card menu-card">
-     
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Veg Spring Roll</h5>
-                  <span class="text-warning fw-bold">₹220</span>
-                </div>
-                <p class="card-text text-muted">Crispy fried rolls stuffed with spiced veggies.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card menu-card">
-                          <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Paneer 65</h5>
-                  <span class="text-warning fw-bold">₹250</span>
-                </div>
-                <p class="card-text text-muted">South Indian style deep-fried paneer cubes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Paneer Dishes -->
-      <div class="tab-pane fade" id="paneer" role="tabpanel" aria-labelledby="paneer-tab">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card menu-card">
-          
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Paneer Lababdar</h5>
-                  <span class="text-warning fw-bold">₹390</span>
-                </div>
-                <p class="card-text text-muted">Paneer in rich onion-tomato gravy with cream.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card menu-card">
+    </nav>
 
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Paneer Bhurji</h5>
-                  <span class="text-warning fw-bold">₹350</span>
-                </div>
-                <p class="card-text text-muted">Scrambled paneer cooked with spices & herbs.</p>
-              </div>
+    <!-- Menu Content -->
+    <main class="menu-container" id="menuContainer">
+        <!-- Appetizers Section -->
+        <section class="menu-section active" id="appetizers">
+            <div class="section-header">
+                <h2>Appetizers</h2>
+                <p>Start your culinary journey with our selection of refined starters</p>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Veg Curries -->
-      <div class="tab-pane fade" id="curries" role="tabpanel" aria-labelledby="curries-tab">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card menu-card">
-    
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Mix Veg Curry</h5>
-                  <span class="text-warning fw-bold">₹280</span>
-                </div>
-                <p class="card-text text-muted">Seasonal vegetables cooked in flavorful curry.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card menu-card">
-    
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Bhindi Masala</h5>
-                  <span class="text-warning fw-bold">₹260</span>
-                </div>
-                <p class="card-text text-muted">Okra stir fried with onions, tomatoes & spices.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Rice -->
-      <div class="tab-pane fade" id="rice" role="tabpanel" aria-labelledby="rice-tab">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card menu-card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Jeera Rice</h5>
-                  <span class="text-warning fw-bold">₹150</span>
-                </div>
-                <p class="card-text text-muted">Fragrant basmati rice tempered with cumin seeds.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card menu-card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Biryani</h5>
-                  <span class="text-warning fw-bold">₹350</span>
-                </div>
-                <p class="card-text text-muted">Aromatic basmati rice cooked with spices and vegetables.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Breads -->
-      <div class="tab-pane fade" id="breads" role="tabpanel" aria-labelledby="breads-tab">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card menu-card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Butter Naan</h5>
-                  <span class="text-warning fw-bold">₹60</span>
-                </div>
-                <p class="card-text text-muted">Soft Indian flatbread brushed with butter.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Beverages -->
-      <div class="tab-pane fade" id="beverages" role="tabpanel" aria-labelledby="beverages-tab">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card menu-card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Cold Coffee</h5>
-                  <span class="text-warning fw-bold">₹140</span>
-                </div>
-                <p class="card-text text-muted">Chilled coffee topped with ice cream.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card menu-card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Fresh Lime Soda</h5>
-                  <span class="text-warning fw-bold">₹100</span>
-                </div>
-                <p class="card-text text-muted">Refreshing lime juice with soda and mint.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Desserts -->
-      <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card menu-card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Gulab Jamun</h5>
-                  <span class="text-warning fw-bold">₹180</span>
-                </div>
-                <p class="card-text text-muted">Soft milk dumplings soaked in rose syrup.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card menu-card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h5 class="card-title fw-semibold">Kulfi</h5>
-                  <span class="text-warning fw-bold">₹150</span>
-                </div>
-                <p class="card-text text-muted">Traditional Indian ice cream with cardamom.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="menu-grid">
+                <article class="menu-card featured">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&h=300&fit=crop" alt="Artisanal Charcuterie Board">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Artisanal Charcuterie Board</h3>
+                            <span class="price">$28</span>
+                        </div>
+                        <p class="description">Curated selection of imported cheeses, cured meats, olives, and seasonal accompaniments</p>
+                    </div>
+                </article>
 
-<!-- About -->
-<section id="about" class="py-5 bg-danger text-white text-center">
-  <div class="container">
-    <h2 class="fw-bold">About Us</h2>
-    <p>Serving authentic Indian cuisine since 2003 with love & tradition.</p>
-  </div>
-</section>
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Seared Scallops</h3>
+                            <span class="price">$22</span>
+                        </div>
+                        <p class="description">Pan-seared diver scallops with cauliflower purée and pancetta crisps</p>
+                    </div>
+                </article>
 
-<!-- Contact -->
-<section id="contact" class="py-5">
-  <div class="container text-center">
-    <h2 class="fw-bold text-danger">Contact Us</h2>
-    <p class="mb-1">📍 123 Spice Street, Flavor District</p>
-    <p class="mb-1">📞 +91 98765 43210</p>
-    <p>✉️ hello@spicegarden.com</p>
-  </div>
-</section>
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Truffle Arancini</h3>
+                            <span class="price">$18</span>
+                        </div>
+                        <p class="description">Crispy risotto balls filled with wild mushrooms and black truffle oil</p>
+                    </div>
+                </article>
 
-<!-- Footer -->
-<footer class="bg-dark text-white py-3 text-center">
-  <p class="mb-0">&copy; 2024 Spice Garden. All rights reserved.</p>
-</footer>
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Tuna Tartare</h3>
+                            <span class="price">$24</span>
+                        </div>
+                        <p class="description">Yellowfin tuna with avocado mousse, citrus, and sesame tuile</p>
+                    </div>
+                </article>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Burrata Caprese</h3>
+                            <span class="price">$19</span>
+                        </div>
+                        <p class="description">Fresh burrata with heirloom tomatoes, basil oil, and aged balsamic</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Duck Liver Mousse</h3>
+                            <span class="price">$21</span>
+                        </div>
+                        <p class="description">Silky mousse with cherry compote and toasted brioche</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Main Courses Section -->
+        <section class="menu-section" id="mains">
+            <div class="section-header">
+                <h2>Main Courses</h2>
+                <p>Our signature dishes showcase the finest ingredients and culinary expertise</p>
+            </div>
+            <div class="menu-grid">
+                <article class="menu-card featured">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&h=300&fit=crop" alt="Wagyu Beef Tenderloin">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Wagyu Beef Tenderloin</h3>
+                            <span class="price">$65</span>
+                        </div>
+                        <p class="description">8oz prime cut with roasted bone marrow, seasonal vegetables, and red wine reduction</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Chilean Sea Bass</h3>
+                            <span class="price">$42</span>
+                        </div>
+                        <p class="description">Pan-roasted with miso glaze, forbidden rice, and bok choy</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Rack of Lamb</h3>
+                            <span class="price">$48</span>
+                        </div>
+                        <p class="description">Herb-crusted with ratatouille, rosemary jus, and garlic confit</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Lobster Risotto</h3>
+                            <span class="price">$52</span>
+                        </div>
+                        <p class="description">Maine lobster with saffron risotto, peas, and lemon oil</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Duck à l'Orange</h3>
+                            <span class="price">$38</span>
+                        </div>
+                        <p class="description">Roasted breast with orange glaze, wild rice, and glazed turnips</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Mushroom Wellington</h3>
+                            <span class="price">$34</span>
+                        </div>
+                        <p class="description">Wild mushroom duxelles in puff pastry with truffle sauce</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Desserts Section -->
+        <section class="menu-section" id="desserts">
+            <div class="section-header">
+                <h2>Desserts</h2>
+                <p>Indulgent sweet endings to complete your dining experience</p>
+            </div>
+            <div class="menu-grid">
+                <article class="menu-card featured">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&h=300&fit=crop" alt="Chocolate Soufflé">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Chocolate Soufflé</h3>
+                            <span class="price">$16</span>
+                        </div>
+                        <p class="description">Dark chocolate soufflé with vanilla bean ice cream and gold leaf</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Crème Brûlée</h3>
+                            <span class="price">$12</span>
+                        </div>
+                        <p class="description">Classic vanilla custard with caramelized sugar and fresh berries</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Tiramisu</h3>
+                            <span class="price">$14</span>
+                        </div>
+                        <p class="description">Traditional Italian dessert with espresso-soaked ladyfingers</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Lemon Tart</h3>
+                            <span class="price">$13</span>
+                        </div>
+                        <p class="description">Silky lemon curd with meringue and candied lemon zest</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Seasonal Fruit Tart</h3>
+                            <span class="price">$15</span>
+                        </div>
+                        <p class="description">Pastry cream tart topped with fresh seasonal fruits</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Cheese Selection</h3>
+                            <span class="price">$18</span>
+                        </div>
+                        <p class="description">Curated artisanal cheeses with honeycomb and nuts</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Beverages Section -->
+        <section class="menu-section" id="beverages">
+            <div class="section-header">
+                <h2>Beverages</h2>
+                <p>Carefully selected wines, cocktails, and non-alcoholic options</p>
+            </div>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Wine Pairing</h3>
+                            <span class="price">$35</span>
+                        </div>
+                        <p class="description">Sommelier-selected wines to complement your meal</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Signature Cocktail</h3>
+                            <span class="price">$16</span>
+                        </div>
+                        <p class="description">House-crafted cocktails with premium spirits and fresh ingredients</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Artisan Coffee</h3>
+                            <span class="price">$6</span>
+                        </div>
+                        <p class="description">Single-origin coffee beans, expertly roasted and brewed</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Herbal Tea Selection</h3>
+                            <span class="price">$5</span>
+                        </div>
+                        <p class="description">Premium loose-leaf teas from around the world</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Fresh Juice</h3>
+                            <span class="price">$8</span>
+                        </div>
+                        <p class="description">Cold-pressed seasonal fruit and vegetable juices</p>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Sparkling Water</h3>
+                            <span class="price">$4</span>
+                        </div>
+                        <p class="description">Premium mineral water with natural effervescence</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Bella Vista</h3>
+            <p class="footer-address">
+                123 Gourmet Street, Culinary District<br>
+                Reservations: (555) 123-4567
+            </p>
+            <p class="footer-hours">
+                Open Tuesday - Sunday, 5:00 PM - 10:00 PM
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
