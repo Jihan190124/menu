@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop') center/cover;
+                url('1st.jpeg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
